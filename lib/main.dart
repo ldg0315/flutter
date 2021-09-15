@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // app bar의 빨간 debug표시 제거
+      debugShowCheckedModeBanner: false, // appbar의 빨간 debug표시 제거
       title: 'BBANTO',
       home: Grade(),
     );
@@ -31,27 +31,27 @@ class Grade extends StatelessWidget {
       body: Padding(
         padding: EdgeInsetsDirectional.fromSTEB(30.0, 40.0, 0.0, 0.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start, //
           children: [
             Center(
-              child: CircleAvatar(
+              child: CircleAvatar(      // 원모양의 위젯, 또한 circleavatar 위젯을 클릭하면 전구 표시가 뜨고 wrap with center를 클릭해주면 중앙으로 정렬
                 backgroundImage: AssetImage('assets/flying.png'),
-                radius: 60.0,
+                radius: 60.0,   // circle 크기
               ),
             ),
-            Divider(
-              height: 60.0, // Divider의 위쪽 아래쪽으로 30.0씩 떨어져있다.
+            Divider( // 구분선
+              height: 60.0, // Divider의 위쪽 아래쪽으로 30.0씩
               color: Colors.grey[850],
               thickness: 0.5,
-              endIndent: 30.0,
+              endIndent: 30.0, // Divider 선이 끝에서 부터 어느정도 떨어져야 할지 지정
             ),
             Text('NAME',
               style: TextStyle(
                 color: Colors.white,
-                letterSpacing: 2.0,
+                letterSpacing: 2.0, // 글자 간 간격
               ),
             ),
-            SizedBox(
+            SizedBox(       // 텍스트위젯 간 간격
               height: 10.0,
             ),
             Text('BBANTO',
@@ -62,7 +62,7 @@ class Grade extends StatelessWidget {
               fontWeight: FontWeight.bold
             ),
             ),
-            SizedBox(
+            SizedBox(       // 텍스트위젯 간 간격
               height: 30.0,
             ),
             Text('BBANTO POWER LEVEL',
@@ -85,9 +85,9 @@ class Grade extends StatelessWidget {
             SizedBox(
               height: 30.0,
             ),
-            Row(
+            Row(          // 가로로 위젯 정렬
               children: [
-                Icon(Icons.check_circle_outline),
+                Icon(Icons.check_circle_outline),    // 아이콘 위젯, 다양한 아이콘 선택 가능
                 SizedBox(
                   width: 10.0,
                 ),
